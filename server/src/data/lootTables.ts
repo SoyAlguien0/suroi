@@ -383,7 +383,8 @@ export const LootTables: Record<string, LootTable> = {
         min: 1,
         max: 1,
         loot: [
-            { tier: "ammo", weight: 1 }
+            { tier: "ammo", weight: 0.9 },
+            { tier: "rare_ammo", weight: 0.1}
         ]
     },
     cabinet: {
@@ -469,11 +470,15 @@ export const LootTiers: Record<string, WeightedItem[]> = {
         { item: "regular_pack", weight: 0.2 },
         { item: "tactical_pack", weight: 0.01 }
     ],
-    ammo: [
+     ammo: [
         { item: "12g", count: 10, weight: 0.75 },
         { item: "556mm", count: 60, weight: 1 },
         { item: "762mm", count: 60, weight: 1 },
         { item: "9mm", count: 60, weight: 1 }
+    ],
+    rare_ammo: [
+        { item: "127mm", count: 10, weight: 0.5 },
+        { item: "curadell", count: 1, weight: 0.5 }
     ],
     throwables: [
         { item: "frag_grenade", count: 2, weight: 1 },
